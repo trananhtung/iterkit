@@ -1,5 +1,5 @@
 {
-  "name": "iterkit",
+  "name": "@billdaddy/iterkit",
   "version": "0.1.0",
   "description": "Extended iterable utilities for TypeScript/JavaScript — lazy generators + eager reducers. more-itertools for the JS ecosystem.",
   "keywords": [

@@ -4,8 +4,8 @@
 
 Extended iterable utilities for TypeScript/JavaScript. Works with **any** `Iterable<T>` — arrays, generators, Sets, Maps, strings. Lazy generators for zero-copy pipelines. Python's `more-itertools` for the JS ecosystem.
 
-[![npm](https://img.shields.io/npm/v/iterkit)](https://www.npmjs.com/package/iterkit)
-[![npm downloads](https://img.shields.io/npm/dw/iterkit)](https://www.npmjs.com/package/iterkit)
+[![npm](https://img.shields.io/npm/v/@billdaddy/iterkit)](https://www.npmjs.com/package/@billdaddy/iterkit)
+[![npm downloads](https://img.shields.io/npm/dw/@billdaddy/iterkit)](https://www.npmjs.com/package/@billdaddy/iterkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Why iterkit?
@@ -21,13 +21,13 @@ Extended iterable utilities for TypeScript/JavaScript. Works with **any** `Itera
 ## Install
 
 ```bash
-npm install iterkit
+npm install @billdaddy/iterkit
 ```
 
 ## Quick start
 
 ```ts
-import { range, chunked, zip, groupBy, sum } from "iterkit";
+import { range, chunked, zip, groupBy, sum } from "@billdaddy/iterkit";
 
 // range + map + sum (lazy pipeline, zero intermediate arrays)
 const total = sum(range(1, 101));              // 5050
@@ -254,7 +254,7 @@ frequenciesBy(['cat','dog','elephant','ox'], w => w.length)
 ## Composing pipelines
 
 ```ts
-import { range, filter, map, chunked, sum, collect } from "iterkit";
+import { range, filter, map, chunked, sum, collect } from "@billdaddy/iterkit";
 
 // Sum of squares of odd numbers in [0, 100), in chunks of 5
 const result = collect(
@@ -266,7 +266,7 @@ const result = collect(
 // No intermediate arrays until collect()
 
 // Word frequency from a large text file (streaming)
-import { frequencies, map } from "iterkit";
+import { frequencies, map } from "@billdaddy/iterkit";
 const words = text.split(/\s+/);
 const freq = frequencies(words);
 const topWords = sortedBy([...freq.entries()], ([, c]) => c, true).slice(0, 10);
